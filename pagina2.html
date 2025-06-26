@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.jpeg" type="image/png"/>
+    <link rel="stylesheet" href="CSS/stylespg.css" />
+    <title>Campanha ECEME</title>
+  </head>
+  <body>
+    <header class="hero-section">
+      <div class="overlay"></div>
+      <div
+        class="container header-container animated slide-left"
+        data-delay="0s"
+      >
+        <img src="img/logoEceme.png" alt="Logo Exército" class="logo" />
+        <div class="header-text">
+          <h1>Escola de Comando e Estado-Maior do Exército</h1>
+          <h2>Escola Marechal Castelo Branco</h2>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+       <div class="hero animated zoom-in" data-delay="0s" id="espaco">
+        <p class="text-button">Como deseja realizar sua denúncia?</p>
+        <button class="btn" onclick="location.href='  '">
+          De forma identificada
+        </button>
+        <button class="btn" onclick="location.href='pagina3.html'">
+          De forma anônima
+        </button>
+      </div>
+      <section class="blog-post animated slide-left" data-delay="0.2s">
+        <p class="post-text">
+          <strong>Assédio sexual</strong> - Artigo 216-A do Código Penal
+          Brasileiro: "constranger alguém com o intuito de obter vantagem ou
+          favorecimento sexual, prevalecendo-se o agente da sua condição de
+          superior hierárquico ou ascendência inerentes ao exercício de emprego,
+          cargo ou função". Pena: 1 a 2 anos de reclusão.<br />
+          <strong>Pena:</strong> 1 a 2 anos de reclusão.
+        </p>
+        <p class="post-text">
+          <strong>Importunação sexual</strong> - Artigo 215-A do Código Penal
+          Brasileiro:“prática, sem a anuência da vítima, de ato libidinoso com o
+          objetivo de satisfazer a própria lascívia ou a de terceiro”. Pena: 1 a
+          5 anos de reclusão.<br />
+          <strong>Pena:</strong> 1 a 5 anos de reclusão.
+        </p>
+      </section>
+    </main>
+
+    <footer class="animated" data-delay="0.3s">
+      <p>CAMPANHA DE PREVENÇÃO À CONDUTA ATENTATÓRIA À DIGNIDADE SEXUAL</p>
+    </footer>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const delay = el.getAttribute("data-delay") || "0s";
+            el.style.setProperty("--delay", delay);
+            el.classList.add("visible");
+            observer.unobserve(el);
+          }
+        });
+      });
+
+      document
+        .querySelectorAll(".animated")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

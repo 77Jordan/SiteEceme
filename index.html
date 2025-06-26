@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/stylespg.css" />
+    <link rel="icon" href="img/favicon.jpeg" type="image/png"/>
+    <title>Campanha ECEME</title>
+  </head>
+  <body>
+    <header class="hero-section">
+      <div class="overlay"></div>
+      <div
+        class="container header-container animated slide-left"
+        data-delay="0s"
+      >
+        <img src="img/logoEceme.png" alt="Logo Exército" class="logo" />
+        <div class="header-text">
+          <h1>Escola de Comando e Estado-Maior do Exército</h1>
+          <h2>Escola Marechal Castelo Branco</h2>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero animated zoom-in" data-delay="0s">
+        <h2 class="titulo">
+          CAMPANHA DE PREVENÇÃO À CONDUTA ATENTATÓRIA À DIGNIDADE SEXUAL
+        </h2>
+        <p class="subtitulo">
+          Um compromisso com o respeito, a ética e a proteção de todos.
+        </p>
+      </section>
+
+      <section class="blog-post animated slide-right" data-delay="0.1s">
+        <p class="post-text">
+          Esta Campanha tem por finalidade prevenir a ocorrência de crimes como
+          o assédio sexual e a importunação sexual na ECEME, bem como propiciar
+          às vítimas, caso existam, os meios necessários para a apresentação de
+          denúncia de tais condutas e o devido apoio institucional.
+        </p>
+      </section>
+
+      <div class="hero animated zoom-in" data-delay="0s">
+        <button class="btn-denuncia" onclick="location.href='pagina2.html'">
+          Registrar Denúncia
+        </button>
+      </div>
+    </main>
+
+    <footer class="animated" data-delay="0.3s">
+      <p>
+        &copy; 2025 Exército Brasileiro – Escola de Comando e Estado-Maior do
+        Exército (ECEME)
+      </p>
+    </footer>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const delay = el.getAttribute("data-delay") || "0s";
+            el.style.setProperty("--delay", delay);
+            el.classList.add("visible");
+            observer.unobserve(el);
+          }
+        });
+      });
+
+      document
+        .querySelectorAll(".animated")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

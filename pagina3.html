@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.jpeg" type="image/png"/>
+    <link rel="stylesheet" href="CSS/stylespg.css" />
+    <title>Campanha ECEME</title>
+  </head>
+  <body>
+    <header class="hero-section">
+      <div class="overlay"></div>
+      <div
+        class="container header-container animated slide-left"
+        data-delay="0s"
+      >
+        <img src="img/logoEceme.png" alt="Logo Exército" class="logo" />
+        <div class="header-text">
+          <h1>Escola de Comando e Estado-Maior do Exército</h1>
+          <h2>Escola Marechal Castelo Branco</h2>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="blog-post animated zoom-in" data-delay="0.3s">
+        <p class="post-text">
+          Sua denúncia poderá ser feita diretamente a uma das militares do Grupo
+          de Prevenção à Conduta Atentatória à Dignidade Sexual, as quais darão
+          conhecimento do fato ao Comando da Escola.
+        </p>
+      </section>
+
+      <!-- Botão Voltar ao Início -->
+      <div class="hero animated zoom-in" data-delay="0s">
+        <button class="btn-denuncia" onclick="location.href='index.html'">
+          Voltar ao Início
+        </button>
+      </div>
+    </main>
+
+    <footer class="animated" data-delay="0.3s">
+      <p>
+       <p>CAMPANHA DE PREVENÇÃO À CONDUTA ATENTATÓRIA À DIGNIDADE SEXUAL</p>
+      </p>
+    </footer>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const delay = el.getAttribute("data-delay") || "0s";
+            el.style.setProperty("--delay", delay);
+            el.classList.add("visible");
+            observer.unobserve(el);
+          }
+        });
+      });
+
+      document
+        .querySelectorAll(".animated")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

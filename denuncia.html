@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/favicon.jpeg" type="image/png"/>
-    <link rel="stylesheet" href="CSS/stylespg.css" />
+    <link rel="icon" href="img/favicon.png" type="image/png"/>
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Campanha ECEME</title>
   </head>
   <body>
@@ -13,6 +13,7 @@
       <div
         class="container header-container animated slide-left"
         data-delay="0s"
+        onclick="location.href='index.html'" style="cursor:pointer;"
       >
         <img src="img/logoEceme.png" alt="Logo Exército" class="logo" />
         <div class="header-text">
@@ -24,34 +25,28 @@
 
     <main class="container">
        <div class="hero animated zoom-in" data-delay="0s" id="espaco">
-        <p class="text-button">Como deseja realizar sua denúncia?</p>
-        <button class="btn" onclick="location.href='  '">
-          De forma identificada
+        <p class="text-button">A qual público pertence?</p>
+        <button class="btn" onclick="window.open('../controle.php?externo&amp;modulo=cadastro&amp;tela=denuncia&amp;acao=novo');">
+          Público interno
         </button>
-        <button class="btn" onclick="location.href='pagina3.html'">
-          De forma anônima
+        <button class="btn" onclick="location.href='anonima.html'">
+          Público externo
         </button>
+        <!-- window.open('../controle.php?externo&amp;anonimo&amp;modulo=cadastro&amp;tela=denuncia&amp;acao=novo'); -->
       </div>
-      <section class="blog-post animated slide-left" data-delay="0.2s">
+      
+      <section class="blog-post animated slide-right" data-delay="0.1s">
         <p class="post-text">
-          <strong>Assédio sexual</strong> - Artigo 216-A do Código Penal
-          Brasileiro: "constranger alguém com o intuito de obter vantagem ou
-          favorecimento sexual, prevalecendo-se o agente da sua condição de
-          superior hierárquico ou ascendência inerentes ao exercício de emprego,
-          cargo ou função". Pena: 1 a 2 anos de reclusão.<br />
-          <strong>Pena:</strong> 1 a 2 anos de reclusão.
-        </p>
-        <p class="post-text">
-          <strong>Importunação sexual</strong> - Artigo 215-A do Código Penal
-          Brasileiro:“prática, sem a anuência da vítima, de ato libidinoso com o
-          objetivo de satisfazer a própria lascívia ou a de terceiro”. Pena: 1 a
-          5 anos de reclusão.<br />
-          <strong>Pena:</strong> 1 a 5 anos de reclusão.
+          Esta Campanha tem por finalidade prevenir a ocorrência de crimes como
+          o assédio sexual e a importunação sexual na ECEME, bem como propiciar
+          às vítimas, caso existam, os meios necessários para a apresentação de
+          denúncia de tais condutas e o devido apoio institucional.
         </p>
       </section>
+      
     </main>
 
-    <footer class="animated" data-delay="0.3s">
+    <footer class="animated" data-delay="0.2s">
       <p>CAMPANHA DE PREVENÇÃO À CONDUTA ATENTATÓRIA À DIGNIDADE SEXUAL</p>
     </footer>
 
